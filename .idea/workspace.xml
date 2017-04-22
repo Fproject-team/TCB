@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e99bd0a3-3937-4b27-8e09-70d39fb4d850" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Nimrod.txt" afterPath="$PROJECT_DIR$/Nimrod.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,9 +59,9 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="NimrodDickler &lt;nimroddickler@gmail.com&gt;" />
         <option value="MuliTu" />
         <option value="Muli" />
-        <option value="NimrodDickler &lt;nimroddickler@gmail.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -370,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491408382974</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit change for test 2">
+      <created>1492862710152</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1492862710152</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
