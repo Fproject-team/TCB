@@ -1,9 +1,25 @@
 from array import array
+from sklearn.feature_extraction.text import CountVectorizer
+import os
 indexWord=0
 theDictionary = {}
 zeroList=None
 
 
+############################################# Functions #############################################
+
+#Reading from File
+def readFile():
+    file = open("bagOfWords.txt","r")
+    theDictionary[len(theDictionary)]=file.read();
+    file.close()
+
+
+#Writing to File
+def writeFile():
+    file = open("bagOfWords.txt", "w+")
+    for word in theDictionary:
+        file.write(theDictionary[word]+"\n")
 
 
 #This function check if the word is already in the dictionry,if not, the function add it
@@ -18,6 +34,7 @@ def checkWord(word):
 
     if(inDictionary == False):
         theDictionary[len(theDictionary)]=word.lower();
+        file = open("bagOfWords.txt","w")
 
 #This function check if the word is already in the dictionry
 def checkWordAndNoAdding(word):
@@ -43,13 +60,15 @@ def checkInDictionary(string):
     for iterator in string:
         checkWord(iterator)
 
+#Returning the index number
 def wordIndex(word):
     word.lower()
     for index in theDictionary:
         if(word == theDictionary[index]):
             return index
 
-def wordsAmountInString(string):
+#Create the vector
+def vectorCreate(string):
     splitString = splitStringToWords(string)
     zeroList = [0] * len(theDictionary)
     for word in splitString:
@@ -61,17 +80,22 @@ def wordsAmountInString(string):
     return zeroList
 
 
-
+############################################# Varibles #############################################
 string2 = "The icon opens but the icons do not appear in the program. Standard Dikla House of the Century, 21st Floor Permissions for the honeysuckle burst   The ININ permission and connection to the Peretz Forest must be opened, so you can enter the systemThanks The ININ does not openDuring the conversation I get another call (as if my status is vacant but actually I'm in a conversation) Call number 10069113 "
+string3= "TODO yosi icon  icon icon do not appear  House"
+
+
+############################################# Main #############################################
+readFile()
 
 checkInDictionary(string2)
-testArr=wordsAmountInString(string2)
+testArr=vectorCreate(string2)
+
 print "this is the dictionary " ,theDictionary
 
-string3= "TODO yosi icon  icon icon do not appear  House"
-testArr=wordsAmountInString(string3)
-#print theDictionary
-
-
+testArr=vectorCreate(string3)
 print string3
+print len(theDictionary)
 print testArr
+writeFile()
+
