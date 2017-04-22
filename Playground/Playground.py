@@ -6,7 +6,7 @@ def PrintMyName( name ):
    print name
    return [name]
 
-
+nnn = "Nimrod"
 myName = "nimrod"
 
 returnName = PrintMyName(myName)
