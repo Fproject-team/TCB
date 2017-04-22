@@ -8,6 +8,7 @@ def PrintMyName( name ):
 
 nnn = "Nimrod"
 myName = "nimrod"
+muli = "muli"
 
 returnName = PrintMyName(myName)
 
