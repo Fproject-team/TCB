@@ -7,6 +7,7 @@ print a
 
 
 def list_channels():
+    slack_client = SlackClient('xoxp-87030285349-87039528343-173762986482-e7badabfe0e4b37e9c30c3f294a9af08')
     channels_call = slack_client.api_call("channels.list")
     if channels_call.get('ok'):
         return channels_call['channels']
@@ -19,6 +20,7 @@ def channel_info(channel_id):
     return None
 
 def send_message(channel_id, message):
+    slack_client = SlackClient('xoxp-87030285349-87039528343-173762986482-e7badabfe0e4b37e9c30c3f294a9af08')
     slack_client.api_call(
         "chat.postMessage",
         channel=channel_id,
@@ -27,10 +29,21 @@ def send_message(channel_id, message):
         icon_emoji=':robot_face:'
     )
 
+def send_to_channel(channel_name,messege):
+    channels = list_channels()
+    if channels:
+        for channel in channels:
+            if channel['name'] == channel_name:
+                send_message(channel['id'], messege )
+
+        print('-----')
+    else:
+        print("Unable to authenticate.")
+
+
 if __name__ == '__main__':
     channels = list_channels()
     if channels:
-        print("Channels: ")
         for channel in channels:
             print(channel['name'] + " (" + channel['id'] + ")")
             detailed_info = channel_info(channel['id'])
@@ -40,6 +53,10 @@ if __name__ == '__main__':
             if channel['name'] == 'general':
                 send_message(channel['id'], "Hello " +
                              channel['name'] + "! It worked!")
+
         print('-----')
     else:
         print("Unable to authenticate.")
+
+
+

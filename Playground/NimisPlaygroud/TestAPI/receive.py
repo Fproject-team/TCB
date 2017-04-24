@@ -1,6 +1,7 @@
 import os
 from flask import Flask, request, Response
-
+from classify import classify
+from app import send_to_channel
 
 app = Flask(__name__)
 
@@ -14,6 +15,9 @@ def inbound():
         username = request.form.get('user_name')
         text = request.form.get('text')
         inbound_message = username + " in " + channel + " says: " + text
+        category =  classify(text)
+        outbound_message = "A ticket is opened to the " + category + " department"
+        send_to_channel(channel,outbound_message)
         print(inbound_message)
     return Response(), 200
 
