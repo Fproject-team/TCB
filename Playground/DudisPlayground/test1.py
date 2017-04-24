@@ -1,10 +1,12 @@
 
 from sklearn.feature_extraction.text import CountVectorizer
-tags = [
-  "dudi moran muli nimi","moran","muli"
-]
-
-dataset = [
+from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.naive_bayes import MultinomialNB
+class TrainData:
+    data = []
+    target = []
+traindata = TrainData()
+traindata.data = [
     "I don't have internet",
     "the light is broken",
     "My paycheck is wrong",
@@ -19,7 +21,7 @@ dataset = [
     "what is my yearly budget",
     "I can't open excel"
 ]
-target = [
+traindata.target = [
     "IT",
     "Maintenance",
     "Finance",
@@ -34,22 +36,19 @@ target = [
     "Finance",
     "IT"
 ]
-count_vect = CountVectorizer()
-X_train_counts = count_vect.fit_transform(dataset).toarray()
-X_train_counts.shape
-print (X_train_counts)
-
-dataset1 = [
-    "excel"
+testdata = [
+    "excel",
+    "salary",
+    "table"
 ]
+count_vect = CountVectorizer()
+TrainDataVector = count_vect.fit_transform(traindata.data).toarray()
 
-from sklearn.feature_extraction.text import TfidfTransformer
-from sklearn.naive_bayes import MultinomialNB
-clf = MultinomialNB().fit(X_train_counts, target)
-X_new_counts = count_vect.transform(dataset1)
-tfidf_transformer = TfidfTransformer(use_idf=False).fit(X_train_counts)
+clf = MultinomialNB().fit(TrainDataVector, traindata.target)
+X_new_counts = count_vect.transform(testdata)
+tfidf_transformer = TfidfTransformer(use_idf=False).fit(TrainDataVector)
 X_new_tfidf = tfidf_transformer.transform(X_new_counts)
 predicted = clf.predict(X_new_tfidf)
 
-for doc, category in zip(dataset1, predicted):
-    print((doc,category))
+for doc, category in zip(testdata, predicted):
+    print(doc,category)
