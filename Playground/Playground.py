@@ -1,17 +1,17 @@
-import sklearn
+class Person():
+   name=''
+   age=0
+   info=''
 
-def PrintMyName( name ):
-   "print my name and returns a name"
-   print "My Name is:"
-   print name
-   return [name]
+   def how_am_i(self):
+      print "my name is " + self.name + "and my age is " +str(self.age)+ " and ther is my info:"+self.info
 
-nnn = "Nimrod"
-myName = "nimrod"
-muli = "muli"
 
-returnName = PrintMyName(myName)
 
-print "The returned name is:"
-print returnName
 
+x =Person()
+x.info="blabla"
+x.age=20
+x.name="muli"
+
+x.how_am_i()
