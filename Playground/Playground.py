@@ -15,3 +15,5 @@ x.age=20
 x.name="muli"
 
 x.how_am_i()
+
+b = "nimo"
