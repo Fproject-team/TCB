@@ -1,4 +1,3 @@
-import os
 from flask import Flask, request, Response
 from classify import classify
 from app import send_to_channel
