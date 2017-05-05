@@ -21,6 +21,18 @@ git checkout Playgroup
 crontab -e
 */1 * * * * cd /home/nimrodd/git/TCB && git pull -q origin Playgroup
 
+#Download ngrok
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+
+#Install unzip
+sudo apt-get install unzip
+
+#Unzip ngrok
+unzip ngrok.zip
+
+# Set ngrok auth token
+./ngrok authtoken 75cp9XLZSxWeAc9cY8p8X_6Ybw1SScE8vqhP5Sn3nnK
+
 
 
 
