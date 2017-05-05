@@ -34,6 +34,11 @@ unzip ngrok.zip
 ./ngrok authtoken 75cp9XLZSxWeAc9cY8p8X_6Ybw1SScE8vqhP5Sn3nnK
 
 
+# Getngrok URL from python script
+
+pip install slackclient
+
+
 
 
 !# Possible issues because it's installed on my personal project
