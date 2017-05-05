@@ -1,7 +1,54 @@
-git
+
+
+# Getting Anaconda 2.7
+wget http://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh
+
+#Installing Anaconda 2.7
+bash Anaconda2-4.3.1-Linux-x86_64.sh
+
+# Add Anaconda to path
+export PATH=/home/nimrodd/anaconda2/bin:$PATH
+
+# Create a forlder for the repository and clone the repo inside it
+mkdir git
+nimrodd@tcbmicrosrv01:~$ cd git/
+nimrodd@tcbmicrosrv01:~/git$ git clone https://github.com/Fproject-team/TCB.git
+
+# Checkout the current working branch
+git checkout Playgroup
+
+# Configure a cron job to pull from git every minute
+crontab -e
+*/1 * * * * cd /home/nimrodd/git/TCB && git pull -q origin Playgroup
+
+#Download ngrok
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+
+#Install unzip
+sudo apt-get install unzip
+
+#Unzip ngrok
+unzip ngrok.zip
+
+# Set ngrok auth token
+./ngrok authtoken 75cp9XLZSxWeAc9cY8p8X_6Ybw1SScE8vqhP5Sn3nnK
+
+
+# Getngrok URL from python script
+
+pip install slackclient
+
+
+
+
+!# Possible issues because it's installed on my personal project
+!# Should install it on TCB User - Redeploy VM
+
+# for python 3 (just in case)
+wget http://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh
+bash Anaconda3-4.3.1-Linux-x86_64.sh
+
+
 proxy service
 python anaconda
 c++ for python
-
-packages:
-look at imports
