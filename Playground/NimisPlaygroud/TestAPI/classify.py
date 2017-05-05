@@ -6,8 +6,8 @@ def classify(message):
     from sklearn.feature_extraction.text import CountVectorizer
     from sklearn.feature_extraction.text import TfidfTransformer
     from sklearn.naive_bayes import MultinomialNB
-    import ReadFromDB as train
-    import DelSymbols as Sym
+    #import ReadFromDB as train
+    #import DelSymbols as Sym
     class TrainData:
         data = []
         target = []
