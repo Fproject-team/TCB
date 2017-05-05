@@ -12,8 +12,8 @@ def classify(message):
         data = []
         target = []
 
-    oldtraindata = TrainData()
-    oldtraindata.data = [
+    traindata = TrainData()
+    traindata.data = [
         "I don't have internet",
         "the light is broken",
         "My paycheck is wrong",
@@ -28,7 +28,7 @@ def classify(message):
         "what is my yearly budget",
         "I can't open excel"
     ]
-    oldtraindata.target = [
+    traindata.target = [
         "IT",
         "Maintenance",
         "Finance",
@@ -43,11 +43,6 @@ def classify(message):
         "Finance",
         "IT"
     ]
-    traindata = train.ReadFromDB()
-    for i in traindata.data:
-        i.encode('utf-8').strip()
-        print i
-    print traindata.data
     testdata = [message]
     count_vect = CountVectorizer()
     TrainDataVector = count_vect.fit_transform(traindata.data).toarray()
@@ -60,5 +55,11 @@ def classify(message):
         return (category)
 
 
-x=classify("cant open computer")
+x=classify("computer")
+print(x)
+x=classify("my inin doesnt work")
+print(x)
+x=classify("dont have network")
+print(x)
+x=classify("cant connect my database")
 print(x)
