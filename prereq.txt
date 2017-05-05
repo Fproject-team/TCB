@@ -1,0 +1,7 @@
+git
+proxy service
+python anaconda
+c++ for python
+
+packages:
+look at imports

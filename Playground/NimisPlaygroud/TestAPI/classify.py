@@ -45,7 +45,8 @@ def classify(message):
     ]
     traindata = train.ReadFromDB()
     for i in traindata.data:
-        i = myFunction(i)
+        i.encode('utf-8').strip()
+        print i
     print traindata.data
     testdata = [message]
     count_vect = CountVectorizer()
