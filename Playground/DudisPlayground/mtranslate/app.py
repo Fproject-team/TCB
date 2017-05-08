@@ -25,7 +25,7 @@ def send_message(channel_id, message):
         "chat.postMessage",
         channel=channel_id,
         text=message,
-        username='pythonbot',
+        username='TCB',
         icon_emoji=':robot_face:'
     )
 
