@@ -1,6 +1,5 @@
 import csv
 from Playground.DudisPlayground.mtranslate import translate
-from WriteToDB import WriteToDB
 import WriteToDB
 DB = WriteToDB
 with open("C:\Users\dudia\Desktop\TCB\HarelDataSet\MiniHarelDB.csv") as csvfile:
