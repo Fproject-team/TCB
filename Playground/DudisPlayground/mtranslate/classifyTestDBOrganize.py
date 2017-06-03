@@ -13,6 +13,9 @@ def classify(message):
     clf = cPickle.loads(clfDB['classify'])
     TrainDataVector = cPickle.loads(clfDB['vector'])
     count_vect = cPickle.loads(clfDB['count'])
+    #clf = cPickle.loads(clfDB[0][0])
+    #TrainDataVector = cPickle.loads(clfDB[0][1])
+    #count_vect = cPickle.loads(clfDB[0][2])
     testdata = [message]
     X_new_counts = count_vect.transform(testdata)
     tfidf_transformer = TfidfTransformer(use_idf=False).fit(TrainDataVector)
