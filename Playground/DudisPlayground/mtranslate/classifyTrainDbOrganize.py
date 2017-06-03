@@ -1,14 +1,14 @@
 import base64
 import cPickle
-
-
 def classify():
     from sklearn.feature_extraction.text import CountVectorizer
     from sklearn.feature_extraction.text import TfidfTransformer
     from sklearn.naive_bayes import MultinomialNB
     import WriteClassifyToDB
+    import WriteClassifyToStorge
     import ReadFromDBDBOrganize as train
-    write = WriteClassifyToDB
+    #write = WriteClassifyToDB
+    write = WriteClassifyToStorge
     class TrainData:
         id = []
         data = []
@@ -21,8 +21,8 @@ def classify():
     count_vect = CountVectorizer()
     TrainDataVector = count_vect.fit_transform(traindata.data).toarray()
     clf = MultinomialNB().fit(TrainDataVector, traindata.target)
-    write.WriteClassifyToDB('HarelNew',cPickle.dumps(clf),cPickle.dumps(TrainDataVector),cPickle.dumps(count_vect))
-
+    #write.WriteClassifyToDB('HarelNew',cPickle.dumps(clf),cPickle.dumps(TrainDataVector),cPickle.dumps(count_vect))
+    write.WriteClassifyToStorge('HarelNew', cPickle.dumps(clf), cPickle.dumps(TrainDataVector), cPickle.dumps(count_vect))
    #cPickle.
 
 
