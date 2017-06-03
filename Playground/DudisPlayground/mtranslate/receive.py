@@ -18,6 +18,7 @@ def inbound():
         inbound_message = username + " in " + channel + " says: " + text
         category =  classify(text)
         outbound_message = "A ticket is opened to the " + category + " department"
+        print outbound_message
         send_to_channel(channel,outbound_message)
         print(inbound_message)
     return Response(), 200
