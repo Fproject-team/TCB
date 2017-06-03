@@ -16,6 +16,7 @@ def inbound():
         username = request.form.get('user_name')
         text = request.form.get('text')
         inbound_message = username + " in " + channel + " says: " + text
+        print inbound_message
         category =  classify(text)
         outbound_message = "A ticket is opened to the " + category + " department"
         print outbound_message
