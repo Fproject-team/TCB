@@ -13,8 +13,11 @@ SLACK_WEBHOOK_SECRET = 'aBs7oz3QFZ7pJrQQFlaicdgt'
 def inbound():
     if request.form.get('token') == SLACK_WEBHOOK_SECRET:
         channel = request.form.get('channel_name')
+        print channel
         username = request.form.get('user_name')
+        print username
         text = request.form.get('text')
+        print text
         inbound_message = username + " in " + channel + " says: " + text
         print inbound_message
         category =  classify(text)
