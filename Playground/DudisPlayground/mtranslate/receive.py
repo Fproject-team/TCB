@@ -1,5 +1,5 @@
 from flask import Flask, request, Response
-from Classify.classifyTest import classify
+from Classify.classifyTestDBOrganize import classify
 print classify
 # from classifyTestDBOrganize import classify
 from Slack.app import send_to_channel
