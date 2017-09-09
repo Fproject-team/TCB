@@ -3,7 +3,7 @@ import sys
 print sys.path
 from Classify.classifyTest import classify
 # from classifyTestDBOrganize import classify
-from Playground.DudisPlayground.mtranslate.Slack.app import send_to_channel
+from Slack.app import send_to_channel
 
 app = Flask(__name__)
 
