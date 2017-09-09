@@ -1,7 +1,7 @@
 from flask import Flask, request, Response
 import sys
 print sys.path
-import Playground.DudisPlayground.mtranslate.Classify.classifyTest
+from Playground.DudisPlayground.mtranslate.Classify.classifyTest import classify
 # from classifyTestDBOrganize import classify
 from Playground.DudisPlayground.mtranslate.Slack.app import send_to_channel
 
@@ -18,7 +18,7 @@ def inbound():
         username = request.form.get('user_name')
         text = request.form.get('text')
         inbound_message = username + " in " + channel + " says: " + text
-        category =  Playground.DudisPlayground.mtranslate.Classify.classifyTest.classify(text)
+        category =  classify(text)
         outbound_message = "A ticket is opened to the " + category + " department"
         send_to_channel(channel,outbound_message)
         print(inbound_message)
