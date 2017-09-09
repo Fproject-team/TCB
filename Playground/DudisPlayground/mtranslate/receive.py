@@ -1,6 +1,6 @@
 from flask import Flask, request, Response
 import sys
-sys.path.append("./Playground/DudisPlayground/mtranslate/Classify/classifyTest")
+sys.path.append("~/git/TCB/Playground/DudisPlayground/mtranslate/Classify/classifyTest")
 from Playground.DudisPlayground.mtranslate.Classify.classifyTest import classify
 # from classifyTestDBOrganize import classify
 from Playground.DudisPlayground.mtranslate.Slack.app import send_to_channel
