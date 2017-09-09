@@ -2,13 +2,13 @@ import cPickle
 
 from sklearn.feature_extraction.text import TfidfTransformer
 
-import Playground.DudisPlayground.mtranslate.DB.ReadClassifyFromStorge
+import DudisPlayground.mtranslate.Classify.DB.ReadClassifyFromStorge
 
 
 def classify(message):
     #read = ReadClassifyFromDB
     #clfDB = read.ReadFromDB('Harel')
-    read = Playground.DudisPlayground.mtranslate.DB.ReadClassifyFromStorge
+    read = DudisPlayground.mtranslate.Classify.DB.ReadClassifyFromStorge
     clfDB = read.ReadClassifyFromStorge('HarelNew')
     clf = cPickle.loads(clfDB['classify'])
     TrainDataVector = cPickle.loads(clfDB['vector'])

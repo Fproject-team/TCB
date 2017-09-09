@@ -1,6 +1,6 @@
 import pymysql
 
-from Playground.DudisPlayground.mtranslate.DB import ReadFromDBDBOrganize as train
+from DudisPlayground.mtranslate.Classify.DB import ReadFromDBDBOrganize as train
 
 
 class TrainData:

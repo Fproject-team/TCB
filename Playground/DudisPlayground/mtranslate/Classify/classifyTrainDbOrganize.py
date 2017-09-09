@@ -2,8 +2,8 @@ import cPickle
 def classify():
     from sklearn.feature_extraction.text import CountVectorizer
     from sklearn.naive_bayes import MultinomialNB
-    from Playground.DudisPlayground.mtranslate.DB.WriteClassifyToStorge import WriteClassifyToStorge
-    from Playground.DudisPlayground.mtranslate.DB import ReadFromDBDBOrganize as train
+    from DudisPlayground.mtranslate.Classify.DB import WriteClassifyToStorge
+    from DudisPlayground.mtranslate.Classify.DB import ReadFromDBDBOrganize as train
     #write = WriteClassifyToDB
     write = WriteClassifyToStorge
     class TrainData:

@@ -1,9 +1,9 @@
 import csv
 
-import Playground.DudisPlayground.mtranslate.DB.WriteToDB
+import DudisPlayground.mtranslate.Classify.DB.WriteToDB
 from Playground.DudisPlayground.mtranslate import translate
 
-DB = Playground.DudisPlayground.mtranslate.DB.WriteToDB
+DB = DudisPlayground.mtranslate.Classify.DB.WriteToDB
 with open("C:\Users\dudia\Desktop\TCB\HarelDataSet\MiniHarelDB.csv") as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:

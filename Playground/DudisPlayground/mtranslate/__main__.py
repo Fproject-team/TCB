@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import absolute_import
-from .core import translate
+
 import sys
+
+from DudisPlayground.mtranslate.Classify.Translate.core import translate
 
 USAGE = ("""Name: mou_translator
 Usage:
