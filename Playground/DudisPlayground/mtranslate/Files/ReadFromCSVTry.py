@@ -5,7 +5,7 @@ import sys
 import Classify.DB.DBOrganize
 from Classify.Translate.core import translate
 
-DB = DudisPlayground.mtranslate.Classify.DB.DBOrganize
+DB = Classify.DB.DBOrganize
 def ReadFromCSV(path,comp_name):
     csvpath = path
     comp = comp_name
