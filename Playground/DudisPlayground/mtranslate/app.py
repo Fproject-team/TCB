@@ -37,6 +37,7 @@ def send_to_channel(channel_name,messege):
     if channels:
         for channel in channels:
             if channel['name'] == channel_name:
+                print ("send")
                 send_message(channel['id'], messege )
 
         print('-----')
