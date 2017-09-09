@@ -1,5 +1,8 @@
-import ReadFromDBDBOrganize as train
 import pymysql
+
+from Playground.DudisPlayground.mtranslate.DB import ReadFromDBDBOrganize as train
+
+
 class TrainData:
     id = []
     data = []

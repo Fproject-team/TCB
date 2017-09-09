@@ -2,8 +2,8 @@ import csv
 import sys
 import chardet
 from Playground.DudisPlayground.mtranslate import translate
-import DBOrganize
-DB = DBOrganize
+import Playground.DudisPlayground.mtranslate.DBOrganize
+DB = Playground.DudisPlayground.mtranslate.DBOrganize
 with open("C:\Users\dudia\Desktop\TCB\HarelDataSet\NewHarel.csv") as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:

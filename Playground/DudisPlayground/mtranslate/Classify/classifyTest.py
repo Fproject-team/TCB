@@ -1,8 +1,8 @@
 import cPickle
 
-from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+from sklearn.feature_extraction.text import TfidfTransformer
 
-import ReadClassifyFromDB
+from Playground.DudisPlayground.mtranslate.DB import ReadClassifyFromDB
 
 
 def classify(message):

@@ -1,7 +1,8 @@
 from flask import Flask, request, Response
-from classifyTest import classify
-#from classifyTestDBOrganize import classify
-from app import send_to_channel
+
+from Playground.DudisPlayground.mtranslate.Classify.classifyTest import classify
+# from classifyTestDBOrganize import classify
+from Playground.DudisPlayground.mtranslate.Slack.app import send_to_channel
 
 app = Flask(__name__)
 

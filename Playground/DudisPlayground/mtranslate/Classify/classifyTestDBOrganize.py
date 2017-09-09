@@ -1,14 +1,14 @@
 import cPickle
 
-from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+from sklearn.feature_extraction.text import TfidfTransformer
 
-import ReadClassifyFromDB
-import ReadClassifyFromStorge
+import Playground.DudisPlayground.mtranslate.DB.ReadClassifyFromStorge
+
 
 def classify(message):
     #read = ReadClassifyFromDB
     #clfDB = read.ReadFromDB('Harel')
-    read = ReadClassifyFromStorge
+    read = Playground.DudisPlayground.mtranslate.DB.ReadClassifyFromStorge
     clfDB = read.ReadClassifyFromStorge('HarelNew')
     clf = cPickle.loads(clfDB['classify'])
     TrainDataVector = cPickle.loads(clfDB['vector'])
