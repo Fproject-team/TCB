@@ -1,15 +1,15 @@
 from slackclient import SlackClient
 
-#slack_client = SlackClient('xoxp-87030285349-87039528343-173762986482-e7badabfe0e4b37e9c30c3f294a9af08')
-slack_client = SlackClient('xoxp-87030285349-87039528343-173089390704-5c13f07dbca43ccae65088ce7a888912')
+slack_client = SlackClient('xoxp-87030285349-87039528343-173762986482-e7badabfe0e4b37e9c30c3f294a9af08')
+#slack_client = SlackClient('xoxp-87030285349-87039528343-173089390704-5c13f07dbca43ccae65088ce7a888912')
 a = slack_client.api_call("api.test")
 
 print a
 
 
 def list_channels():
-    #slack_client = SlackClient('xoxp-87030285349-87039528343-173762986482-e7badabfe0e4b37e9c30c3f294a9af08')
-    slack_client = SlackClient('xoxp-87030285349-87039528343-173089390704-5c13f07dbca43ccae65088ce7a888912')
+    slack_client = SlackClient('xoxp-87030285349-87039528343-173762986482-e7badabfe0e4b37e9c30c3f294a9af08')
+    #slack_client = SlackClient('xoxp-87030285349-87039528343-173089390704-5c13f07dbca43ccae65088ce7a888912')
     channels_call = slack_client.api_call("channels.list")
     if channels_call.get('ok'):
         return channels_call['channels']
@@ -22,8 +22,8 @@ def channel_info(channel_id):
     return None
 
 def send_message(channel_id, message):
-    #slack_client = SlackClient('xoxp-87030285349-87039528343-173762986482-e7badabfe0e4b37e9c30c3f294a9af08')
-    slack_client = SlackClient('xoxp-87030285349-87039528343-173089390704-5c13f07dbca43ccae65088ce7a888912')
+    slack_client = SlackClient('xoxp-87030285349-87039528343-173762986482-e7badabfe0e4b37e9c30c3f294a9af08')
+    #slack_client = SlackClient('xoxp-87030285349-87039528343-173089390704-5c13f07dbca43ccae65088ce7a888912')
     slack_client.api_call(
         "chat.postMessage",
         channel=channel_id,
