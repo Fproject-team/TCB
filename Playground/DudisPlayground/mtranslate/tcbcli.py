@@ -36,7 +36,7 @@ def train():
 @server.command(help = "Upload new training set to TCB")
 @click.option('--path', help='The pass to the CSV file')
 @click.option('--orgname',help='The name of the organization')
-def upload(path,prgname):
+def upload(path,orgname):
     import Files.ReadFromCSVTry
     click.echo('Starting Upplad')
     ReadFromCSV(path,orgname)
