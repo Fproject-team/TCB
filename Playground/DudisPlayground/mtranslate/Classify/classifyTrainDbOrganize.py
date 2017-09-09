@@ -2,8 +2,8 @@ import cPickle
 def classify():
     from sklearn.feature_extraction.text import CountVectorizer
     from sklearn.naive_bayes import MultinomialNB
-    from Classify.DB import WriteClassifyToStorge
-    from Classify.DB import ReadFromDBDBOrganize as train
+    from DB import WriteClassifyToStorge
+    from DB import ReadFromDBDBOrganize as train
     #write = WriteClassifyToDB
     write = WriteClassifyToStorge
     class TrainData:
