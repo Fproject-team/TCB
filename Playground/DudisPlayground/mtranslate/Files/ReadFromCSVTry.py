@@ -1,8 +1,9 @@
+import sys
+sys.path.insert(0, '/home/nimrod/git/TCB/Playground/DudisPlayground/mtranslate')
 import csv
 import sys
-
-import DudisPlayground.mtranslate.Classify.DB.DBOrganize
-from Playground.DudisPlayground.mtranslate.Classify.Translate.core import translate
+import Classify.DB.DBOrganize
+from Classify.Translate.core import translate
 
 DB = DudisPlayground.mtranslate.Classify.DB.DBOrganize
 def ReadFromCSV(path,comp_name):

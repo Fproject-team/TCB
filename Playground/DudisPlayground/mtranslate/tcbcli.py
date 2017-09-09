@@ -1,5 +1,6 @@
 import click
 import os
+import sys
 
 def banner():
     click.echo("""
@@ -34,7 +35,10 @@ def train():
 
 @server.command(help = "Upload new training set to TCB")
 def upload():
-     click.echo('Starting Upplad')
+    import Files.ReadFromCSVTry
+    click.echo('Starting Upplad')
+    ReadFromCSV("~/x.csv","Harel")
+
 
 
 server.add_command(start)
