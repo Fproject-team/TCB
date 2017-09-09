@@ -5,9 +5,10 @@ from sklearn.feature_extraction.text import TfidfTransformer
 import ReadClassifyFromStorge
 
 
-def classify(message):
+def classify(message,company_name):
     read = ReadClassifyFromStorge
-    clfDB = read.ReadClassifyFromStorge('HarelNew')
+    comp_name = company_name
+    clfDB = read.ReadClassifyFromStorge(company_name)
     clf = cPickle.loads(clfDB['classify'])
     TrainDataVector = cPickle.loads(clfDB['vector'])
     count_vect = cPickle.loads(clfDB['count'])
