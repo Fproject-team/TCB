@@ -37,7 +37,7 @@ def train():
 @click.option('--path', help='The pass to the CSV file')
 @click.option('--orgname',help='The name of the organization')
 def upload(path,orgname):
-    import Files.ReadFromCSVTry
+    from Files.ReadFromCSVTry import ReadFromCSV
     click.echo('Starting Upplad')
     ReadFromCSV(path,orgname)
 
