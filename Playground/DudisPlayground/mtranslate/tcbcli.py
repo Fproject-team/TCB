@@ -1,4 +1,5 @@
 import click
+import os
 
 def banner():
     click.echo("""
@@ -15,7 +16,6 @@ def server():
 
 @server.command(help = "Start TCB Server")
 def start():
-    import os
     click.echo('Starting TCB server') 
     os.system("python receive.py &")
     click.echo('TCB server is started')
@@ -23,7 +23,7 @@ def start():
 @server.command(help = "Stop TCB Server")
 def stop():
      click.echo('Stoping TCB server')
-     # PLACEHOLDER - Command for starting TCB Server
+     os.system("pkill -f receive.py")
      click.echo('TCB server is stoped')
 
 @server.command(help = "Train TCB")
