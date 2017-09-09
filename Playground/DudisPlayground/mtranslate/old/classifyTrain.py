@@ -4,7 +4,7 @@ import cPickle
 def classify():
     from sklearn.feature_extraction.text import CountVectorizer
     from sklearn.naive_bayes import MultinomialNB
-    from DudisPlayground.mtranslate.Classify.DB import WriteClassifyToDB
+    from DudisPlayground.mtranslate.old import WriteClassifyToDB
     import ReadFromDB as train
     write = WriteClassifyToDB
     class TrainData:

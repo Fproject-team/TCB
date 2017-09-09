@@ -2,7 +2,7 @@ import cPickle
 
 from sklearn.feature_extraction.text import TfidfTransformer
 
-from DB import ReadClassifyFromDB
+from DudisPlayground.mtranslate.old import ReadClassifyFromDB
 
 
 def classify(message):
