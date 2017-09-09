@@ -19,6 +19,3 @@ def classify(message):
     for doc, category in zip(testdata, predicted):
        return (category)
 
-
-x=classify("my storge ")
-print x
