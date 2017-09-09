@@ -20,8 +20,8 @@ def classify():
          i.decode().encode('utf-8').strip()
     count_vect = CountVectorizer()
     TrainDataVector = count_vect.fit_transform(traindata.data).toarray()
-    tfidf_transformer = TfidfTransformer(use_idf=False).fit(TrainDataVector) #del if dont work
-    TrainDataVector = count_vect.fit_transform(TrainDataVector) #del if dont work
+    #tfidf_transformer = TfidfTransformer(use_idf=False).fit(TrainDataVector) #del if dont work
+    #TrainDataVector = count_vect.fit_transform(TrainDataVector) #del if dont work
     clf = MultinomialNB().fit(TrainDataVector, traindata.target)
     #write.WriteClassifyToDB('HarelNew',cPickle.dumps(clf),cPickle.dumps(TrainDataVector),cPickle.dumps(count_vect))
     write.WriteClassifyToStorge('HarelNew', cPickle.dumps(clf), cPickle.dumps(TrainDataVector), cPickle.dumps(count_vect))
