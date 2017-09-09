@@ -28,7 +28,9 @@ def stop():
 
 @server.command(help = "Train TCB")
 def train():
-     click.echo('Starting to train ')
+    from Classify.classifyTrainDbOrganize import classify
+    click.echo('Starting to train')
+    classify()
 
 @server.command(help = "Upload new training set to TCB")
 def upload():
