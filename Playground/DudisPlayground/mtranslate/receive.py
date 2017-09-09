@@ -5,7 +5,7 @@ from app import send_to_channel
 
 app = Flask(__name__)
 
-SLACK_WEBHOOK_SECRET = '7GWfBofDJWeGTIi4jPY7Cwdf'
+#SLACK_WEBHOOK_SECRET = '7GWfBofDJWeGTIi4jPY7Cwdf'
 #SLACK_WEBHOOK_SECRET = 'aBs7oz3QFZ7pJrQQFlaicdgt'
 SLACK_WEBHOOK_SECRET = '0aZmIw6jesR9O6wYiVVh7AgH'
 
