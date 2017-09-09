@@ -34,10 +34,12 @@ def train():
     classify()
 
 @server.command(help = "Upload new training set to TCB")
-def upload():
+@click.option('--path', help='The pass to the CSV file')
+@click.option('--orgname',help='The name of the organization')
+def upload(path,prgname):
     import Files.ReadFromCSVTry
     click.echo('Starting Upplad')
-    ReadFromCSV("~/x.csv","Harel")
+    ReadFromCSV(path,orgname)
 
 
 
