@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 SLACK_WEBHOOK_SECRET = '7GWfBofDJWeGTIi4jPY7Cwdf'
 #SLACK_WEBHOOK_SECRET = 'aBs7oz3QFZ7pJrQQFlaicdgt'
-
+SLACK_WEBHOOK_SECRET = '0aZmIw6jesR9O6wYiVVh7AgH'
 
 @app.route('/slack', methods=['POST'])
 def inbound():
@@ -22,10 +22,13 @@ def inbound():
         print(inbound_message)
     return Response(), 200
 
+@app.route('/health', methods=['GET'])
+def health():
+	return Response('TCB Server is healthy and listening')
 
 @app.route('/', methods=['GET'])
 def test():
-    return Response('It works!')
+    return Response('It works!, you have reached TCB Server!')
 
 if __name__ == "__main__":
     app.run(debug=True)
