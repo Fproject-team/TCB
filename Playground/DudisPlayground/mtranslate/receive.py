@@ -1,5 +1,6 @@
 from flask import Flask, request, Response
-
+import sys
+print sys.path
 from Playground.DudisPlayground.mtranslate.Classify.classifyTest import classify
 # from classifyTestDBOrganize import classify
 from Playground.DudisPlayground.mtranslate.Slack.app import send_to_channel
