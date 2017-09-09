@@ -15,9 +15,9 @@ def server():
 
 @server.command(help = "Start TCB Server")
 def start():
-    from subprocess import call
+    import os
     click.echo('Starting TCB server') 
-    call(["python", "receive.py", "&"])
+    os.system("python receive.py &")
     click.echo('TCB server is started')
 
 @server.command(help = "Stop TCB Server")
