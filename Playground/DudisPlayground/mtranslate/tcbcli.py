@@ -15,9 +15,10 @@ def server():
 
 @server.command(help = "Start TCB Server")
 def start():
-     click.echo('Starting TCB server')
-     # PLACEHOLDER - Command for starting TCB Server
-     click.echo('TCB server is started')
+    from subprocess import call
+    click.echo('Starting TCB server') 
+    call(["python", "receive.py"])
+    click.echo('TCB server is started')
 
 @server.command(help = "Stop TCB Server")
 def stop():
